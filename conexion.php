@@ -18,6 +18,6 @@ if ($conexion -> connect_errno){  //Esta funcion verifica errores de conectivida
 echo "Nuestra conexion presenta fallas";
 exit();
 
-}
+};
 
 ?>

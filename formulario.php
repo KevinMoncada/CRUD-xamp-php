@@ -39,7 +39,20 @@
     </form>
 
     <?php
+    //$_POST["name"] Forma de apuntar a un elemento
+        if (isset($_POST["guardar"])) {
+            include ("conexion.php");
+            $id = $_POST["id"];
+            $nombres = $_POST["nombres"];
+            $apellidos = $_POST["apellidos"];
+            $telefono = $_POST["telefono"];
+            $fecha = $_POST["fecha"];
+            $correo = $_POST["correo"];
 
+            //Consulta a la base de datos
+            mysqli_query($conexion,"INSERT INTO registro (id,nombres,apellidos,telefono,fecha,correo) VALUES('$id','$nombres','$apellidos','$telefono','$fecha','$correo') ");
+            echo "Datos guardados correctamente";
+        };
 
     ?>
     
